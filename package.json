@@ -15,7 +15,7 @@
     "@podium/utils": "3.0.0"
   },
   "devDependencies": {
-    "@podium/layout": "3.0.0-beta.5",
+    "@podium/layout": "3.0.0-beta.7",
     "hapi": "^18.0.0"
   }
 }
