@@ -1,0 +1,21 @@
+{
+  "name": "@podium/hapi-layout",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/layout-plugin.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@podium/utils": "3.0.0"
+  },
+  "devDependencies": {
+    "@podium/layout": "3.0.0-beta.5",
+    "hapi": "^18.0.0"
+  }
+}
