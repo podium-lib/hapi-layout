@@ -32,7 +32,6 @@ const app = Hapi.Server({
 
 const layout = new Layout({
     pathname: '/',
-    logger: console,
     name: 'layout',
 
 });
