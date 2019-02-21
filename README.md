@@ -8,7 +8,7 @@ Hapi plugin for @podium/layout.
 [![Known Vulnerabilities](https://snyk.io/test/github/podium-lib/hapi-layout/badge.svg?style=flat-square)](https://snyk.io/test/github/podium-lib/hapi-layout)
 
 Module for building [@podium/layout] servers with [hapi]. For writing layouts,
-please see the [podium_documentation].
+please see the [Podium documentation].
 
 ## Installation
 
@@ -93,8 +93,8 @@ app.route({
 Its possible to pass request bound parameters to [@podium/context] parsers by
 setting an object at `request.app.params`.
 
-Example: To pass a value to the [context_locale_parser] it should be set on
-`request.app.params.locale` by a extension executed previously of this
+Example: To pass a value to the [@podium/context locale parser] it should be set
+on `request.app.params.locale` by a extension executed previously of this
 extension.
 
 ## License
@@ -119,8 +119,8 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-[context_locale_parser]: https://github.com/podium-lib/context#locale-1 '@podium/context locale parser'
-[podium_documentation]: https://podium-lib.io/ 'Podium documentation'
+[@podium/context locale parser]: https://github.com/podium-lib/context#locale-1 '@podium/context locale parser'
+[Podium documentation]: https://podium-lib.io/ 'Podium documentation'
 [@podium/context]: https://github.com/podium-lib/context '@podium/context'
 [@podium/layout]: https://github.com/podium-lib/layout '@podium/layout'
 [hapi]: https://hapijs.com/ 'Hapi'
