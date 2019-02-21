@@ -60,7 +60,7 @@ app.route({
 app.start();
 ```
 
-## Register Plugin
+## Register plugin
 
 The plugin is registered by passing an instance of this plugin to the [hapi]
 server `.register()` method together with an instance of the [@podium/layout]
