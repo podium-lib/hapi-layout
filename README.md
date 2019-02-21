@@ -86,7 +86,6 @@ app.route({
     method: 'GET',
     path: '/',
     handler: (request, h) => {
-        //
         return request.app.podium.context;
     },
 });
