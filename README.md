@@ -16,6 +16,10 @@ please see the [Podium documentation].
 $ npm install @podium/hapi-layout
 ```
 
+## Requirements
+
+This module require Hapi v17 or newer.
+
 ## Simple usage
 
 Build a simple layout server including a single podlet:
