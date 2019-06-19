@@ -2,7 +2,7 @@
 
 const HapiLayout = require('../');
 const Layout = require('@podium/layout');
-const Hapi = require('hapi');
+const Hapi = require('@hapi/hapi');
 
 const app = Hapi.Server({
     host: 'localhost',
@@ -13,7 +13,6 @@ const layout = new Layout({
     pathname: '/',
     logger: console,
     name: 'layout',
-
 });
 
 const podlet = layout.client.register({
@@ -29,11 +28,10 @@ app.register({
 app.route({
     method: 'GET',
     path: '/',
-    handler: (request, h) => {
-        const ctx = request.app.podium.context;
-        return Promise.all([podlet.fetch(ctx)]).then((result) => {
-            return `<html><body>${result[0]}</body></html>`
-        });
+    handler: async (request, h) => {
+        const incoming = request.app.podium;
+        const result = await podlet.fetch(incoming);
+        return h.podiumSend(result.content);
     },
 });
 
