@@ -27,7 +27,7 @@ Build a simple layout server including a single podlet:
 ```js
 const HapiLayout = require('@podium/hapi-layout');
 const Layout = require('@podium/layout');
-const Hapi = require('hapi');
+const Hapi = require('@hapi/hapi');
 
 const app = Hapi.Server({
     host: 'localhost',
@@ -52,12 +52,11 @@ app.register({
 
 app.route({
     method: 'GET',
-    path: '/',
+    path: layout.pathname(),
     handler: (request, h) => {
-        const ctx = request.app.podium.context;
-        return Promise.all([podlet.fetch(ctx)]).then((result) => {
-            return `<html><body>${result[0]}</body></html>`
-        });
+        const incoming = request.app.podium;
+        const result = await podlet.fetch(incoming);
+        return h.podiumSend(result.content);
     },
 });
 
@@ -79,17 +78,18 @@ app.register({
 
 ## Request params
 
-On each request [@podium/layout] will run a set of operations, such as the
-[@podium/context] parsers, on the request. When doing so [@podium/layout] will
-write parameters to `request.app.podium` which is accessible inside a request
-handelers.
+On each request [@podium/layout] will run a set of operations on the request and
+create an [incoming] object. The [incoming] object is stored at
+`request.app.podium` which is accessible inside request handlers.
 
 ```js
 app.route({
     method: 'GET',
     path: '/',
     handler: (request, h) => {
-        return request.app.podium.context;
+        const incoming = request.app.podium;
+        const result = await podlet.fetch(incoming);
+        return h.podiumSend(result.content);
     },
 });
 ```
@@ -100,6 +100,13 @@ setting an object at `request.app.params`.
 Example: To pass a value to the [@podium/context locale parser] it should be set
 on `request.app.params.locale` by a extension executed previously of this
 extension.
+
+## h.podiumSend(fragment)
+
+This method will wrap the given fragment in a default [document template] before
+dispatching.
+
+See [document template] for further information.
 
 ## License
 
@@ -125,6 +132,7 @@ SOFTWARE.
 
 [@podium/context locale parser]: https://github.com/podium-lib/context#locale-1 '@podium/context locale parser'
 [Podium documentation]: https://podium-lib.io/ 'Podium documentation'
+[document template]: https://podium-lib.io/docs/api/document 'document template'
 [@podium/context]: https://github.com/podium-lib/context '@podium/context'
-[@podium/layout]: https://github.com/podium-lib/layout '@podium/layout'
+[@podium/layout]: https://podium-lib.io/docs/api/layout '@podium/layout'
 [hapi]: https://hapijs.com/ 'Hapi'
