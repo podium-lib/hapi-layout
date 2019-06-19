@@ -79,8 +79,8 @@ app.register({
 ## Request params
 
 On each request [@podium/layout] will run a set of operations on the request and
-create a [incoming] object. The [incoming] object is stored at
-`request.app.podium` which is accessible inside request handelers.
+create an [incoming] object. The [incoming] object is stored at
+`request.app.podium` which is accessible inside request handlers.
 
 ```js
 app.route({
@@ -103,8 +103,8 @@ extension.
 
 ## h.podiumSend(fragment)
 
-This method will wrap the provided fragment in a default [document template]
-before dispatching.
+This method will wrap the given fragment in a default [document template] before
+dispatching.
 
 See [document template] for further information.
 
