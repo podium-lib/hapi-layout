@@ -33,7 +33,7 @@
     "@podium/utils": "4.4.36"
   },
   "devDependencies": {
-    "@hapi/hapi": "20.2.1",
+    "@hapi/hapi": "20.2.2",
     "@podium/layout": "4.6.110",
     "@podium/test-utils": "2.4.1",
     "eslint": "7.1.0",
