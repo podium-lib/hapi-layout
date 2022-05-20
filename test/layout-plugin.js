@@ -1,11 +1,11 @@
-'use strict';
+
 
 const { PodletServer, request } = require('@podium/test-utils');
 const Layout = require('@podium/layout');
 const Hapi = require('@hapi/hapi');
 const tap = require('tap');
 
-const HapiLayout = require('../');
+const HapiLayout = require('..');
 
 class Server {
     constructor(options = {}, podletAddr) {
@@ -20,9 +20,7 @@ class Server {
             ...options,
         });
 
-        layout.view((incoming, fragment) => {
-            return `## ${fragment} ##`;
-        });
+        layout.view((incoming, fragment) => `## ${fragment} ##`);
 
         const podlet = layout.client.register(podletAddr.options);
 
@@ -67,7 +65,7 @@ class Server {
     }
 
     close() {
-        return new Promise(resolve => {
+        return new Promise((resolve) => {
             setTimeout(async () => {
                 await this.app.stop();
                 resolve();
@@ -82,7 +80,7 @@ class Server {
 
 tap.test(
     'Constructor() - object type - should be PodiumLayoutHapiPlugin',
-    t => {
+    (t) => {
         const layout = new HapiLayout();
         t.equal(
             Object.prototype.toString.call(layout),
@@ -98,7 +96,7 @@ tap.test(
 
 tap.test(
     'request layout pathname - should fetch content from podlet and return content wrapped in a document template',
-    async t => {
+    async (t) => {
         const podlet = new PodletServer();
         const service = await podlet.listen();
 
@@ -116,7 +114,7 @@ tap.test(
 
 tap.test(
     'request layout pathname - podlet is dead - should return fallback wrapped in a document template',
-    async t => {
+    async (t) => {
         const podlet = new PodletServer();
         const service = await podlet.listen();
 
@@ -139,7 +137,7 @@ tap.test(
 
 tap.test(
     'GET to "proxy" url - should proxy the request to the Podlets target endpoint',
-    async t => {
+    async (t) => {
         const podlet = new PodletServer();
         const service = await podlet.listen();
 
@@ -168,7 +166,7 @@ tap.test(
 
 tap.test(
     'POST to "proxy" url - should proxy the request to the Podlets target endpoint',
-    async t => {
+    async (t) => {
         const podlet = new PodletServer();
         const service = await podlet.listen();
 
@@ -201,7 +199,7 @@ tap.test(
 
 tap.test(
     'PUT to "proxy" url - should proxy the request to the Podlets target endpoint',
-    async t => {
+    async (t) => {
         const podlet = new PodletServer();
         const service = await podlet.listen();
 
