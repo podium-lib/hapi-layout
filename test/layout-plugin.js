@@ -1,11 +1,9 @@
+import { PodletServer, request } from '@podium/test-utils';
+import Layout from '@podium/layout';
+import Hapi from '@hapi/hapi';
+import tap from 'tap';
 
-
-const { PodletServer, request } = require('@podium/test-utils');
-const Layout = require('@podium/layout');
-const Hapi = require('@hapi/hapi');
-const tap = require('tap');
-
-const HapiLayout = require('..');
+import HapiLayout from '../lib/layout-plugin.js';
 
 class Server {
     constructor(options = {}, podletAddr) {
