@@ -1,6 +1,6 @@
 {
   "name": "@podium/hapi-layout",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "Hapi plugin for Podium Layout.",
   "main": "lib/layout-plugin.js",
   "license": "MIT",
