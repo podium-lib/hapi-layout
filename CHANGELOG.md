@@ -1,3 +1,10 @@
+## [3.0.5](https://github.com/podium-lib/hapi-layout/compare/v3.0.4...v3.0.5) (2023-10-16)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @podium/utils to v4.4.40 ([5279a45](https://github.com/podium-lib/hapi-layout/commit/5279a456cb88fdbb1ca614e51a3a530af02ac4b7))
+
 ## [3.0.4](https://github.com/podium-lib/hapi-layout/compare/v3.0.3...v3.0.4) (2023-01-09)
 
 
