@@ -47,7 +47,7 @@
     "eslint-config-prettier": "9.0.0",
     "eslint-plugin-import": "2.29.0",
     "eslint-plugin-prettier": "5.0.1",
-    "semantic-release": "19.0.5",
+    "semantic-release": "22.0.8",
     "prettier": "3.1.0",
     "tap": "16.3.9",
     "@babel/eslint-parser": "7.22.15"
