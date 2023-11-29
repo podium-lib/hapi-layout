@@ -35,11 +35,11 @@
   },
   "author": "Trygve Lie",
   "dependencies": {
-    "@podium/utils": "5.0.0-next.8"
+    "@podium/utils": "5.0.0"
   },
   "devDependencies": {
-    "@podium/layout": "5.0.0-next.7",
-    "@podium/utils": "4.5.1",
+    "@podium/layout": "5.0.0",
+    "@podium/utils": "5.0.0",
     "@hapi/hapi": "21.3.2",
     "@podium/test-utils": "2.5.2",
     "@semantic-release/changelog": "6.0.3",
