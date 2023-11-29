@@ -1,3 +1,20 @@
+# [4.0.0](https://github.com/podium-lib/hapi-layout/compare/v3.0.7...v4.0.0) (2023-11-29)
+
+
+### Bug Fixes
+
+* Use next releases of Podium packages ([fc0604c](https://github.com/podium-lib/hapi-layout/commit/fc0604c979923e237421d9551c5b3eff6d52de2f))
+
+
+### Features
+
+* Convert to esm ([a378ece](https://github.com/podium-lib/hapi-layout/commit/a378ece3faadfd6708b95b356efb080f1049a6e8))
+
+
+### BREAKING CHANGES
+
+* Module is now ESM only
+
 # [4.0.0-next.3](https://github.com/podium-lib/hapi-layout/compare/v4.0.0-next.2...v4.0.0-next.3) (2023-11-27)
 
 
