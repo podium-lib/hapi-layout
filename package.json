@@ -38,7 +38,7 @@
     "@podium/utils": "5.0.0"
   },
   "devDependencies": {
-    "@podium/layout": "5.0.0",
+    "@podium/layout": "5.0.2",
     "@podium/utils": "5.0.0",
     "@hapi/hapi": "21.3.2",
     "@podium/test-utils": "2.5.2",
