@@ -25,9 +25,9 @@ use v2.x of this module for Hapi v18 or older.
 Build a simple layout server including a single podlet:
 
 ```js
-const HapiLayout = require('@podium/hapi-layout');
-const Layout = require('@podium/layout');
-const Hapi = require('@hapi/hapi');
+import HapiLayout from '@podium/hapi-layout';
+import Layout from '@podium/layout';
+import Hapi from '@hapi/hapi';
 
 const app = Hapi.Server({
     host: 'localhost',
