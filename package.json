@@ -40,7 +40,7 @@
   "devDependencies": {
     "@podium/layout": "5.0.2",
     "@podium/utils": "5.0.2",
-    "@hapi/hapi": "21.3.7",
+    "@hapi/hapi": "21.3.9",
     "@podium/test-utils": "2.5.2",
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/git": "10.0.1",
