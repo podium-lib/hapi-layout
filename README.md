@@ -12,7 +12,7 @@ please see the [Podium documentation].
 ## Installation
 
 ```bash
-$ npm install @podium/hapi-layout
+$ npm install @podium/hapi-layout @podium/layout
 ```
 
 ## Requirements
@@ -29,7 +29,7 @@ import HapiLayout from '@podium/hapi-layout';
 import Layout from '@podium/layout';
 import Hapi from '@hapi/hapi';
 
-const app = Hapi.Server({
+const server = Hapi.Server({
     host: 'localhost',
     port: 7000,
 });
@@ -37,7 +37,6 @@ const app = Hapi.Server({
 const layout = new Layout({
     pathname: '/',
     name: 'layout',
-
 });
 
 const podlet = layout.client.register({
@@ -45,12 +44,12 @@ const podlet = layout.client.register({
     uri: 'http://localhost:7100/manifest.json'
 });
 
-app.register({
+await server.register({
     plugin: new HapiLayout(),
     options: layout,
 });
 
-app.route({
+server.route({
     method: 'GET',
     path: layout.pathname(),
     handler: (request, h) => {
@@ -60,7 +59,8 @@ app.route({
     },
 });
 
-app.start();
+server.start();
+console.log("Server running on %s", server.info.uri);
 ```
 
 ## Register plugin
@@ -70,7 +70,7 @@ server `.register()` method together with an instance of the [@podium/layout]
 class.
 
 ```js
-app.register({
+await server.register({
     plugin: new HapiLayout(),
     options: new Layout(),
 });
@@ -83,10 +83,10 @@ create an [incoming] object. The [incoming] object is stored at
 `request.app.podium` which is accessible inside request handlers.
 
 ```js
-app.route({
+server.route({
     method: 'GET',
     path: '/',
-    handler: (request, h) => {
+    handler: async (request, h) => {
         const incoming = request.app.podium;
         const result = await podlet.fetch(incoming);
         return h.podiumSend(result.content);
