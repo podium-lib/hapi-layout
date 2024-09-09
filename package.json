@@ -1,6 +1,6 @@
 {
   "name": "@podium/hapi-layout",
-  "version": "4.0.7",
+  "version": "4.0.8",
   "type": "module",
   "description": "Hapi plugin for Podium Layout.",
   "main": "lib/layout-plugin.js",
