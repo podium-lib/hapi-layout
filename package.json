@@ -41,7 +41,7 @@
     "@podium/layout": "5.0.2",
     "@podium/utils": "5.1.0",
     "@hapi/hapi": "21.3.10",
-    "@podium/test-utils": "2.5.2",
+    "@podium/test-utils": "3.0.10",
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/git": "10.0.1",
     "eslint": "8.57.0",
