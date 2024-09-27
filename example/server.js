@@ -17,7 +17,7 @@ const layout = new Layout({
 
 const podlet = layout.client.register({
     name: 'myPodlet',
-    uri: 'http://localhost:7100/manifest.json'
+    uri: 'http://localhost:7100/manifest.json',
 });
 
 app.register({
