@@ -4,7 +4,6 @@ Hapi plugin for @podium/layout.
 
 [![Dependencies](https://img.shields.io/david/podium-lib/hapi-layout.svg)](https://david-dm.org/podium-lib/hapi-layout)
 [![GitHub Actions status](https://github.com/podium-lib/hapi-layout/workflows/Run%20Lint%20and%20Tests/badge.svg)](https://github.com/podium-lib/hapi-layout/actions?query=workflow%3A%22Run+Lint+and+Tests%22)
-[![Known Vulnerabilities](https://snyk.io/test/github/podium-lib/hapi-layout/badge.svg)](https://snyk.io/test/github/podium-lib/hapi-layout)
 
 Module for building [@podium/layout] servers with [hapi]. For writing layouts,
 please see the [Podium documentation].
