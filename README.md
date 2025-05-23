@@ -1,3 +1,6 @@
+>
+> ⚠️ This project is deprecated and no longer maintained by the project.
+>
 # @podium/hapi-layout
 
 Hapi plugin for @podium/layout.
